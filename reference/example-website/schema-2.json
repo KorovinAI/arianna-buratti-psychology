@@ -1,0 +1,159 @@
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalClinic",
+  "name": "Cognito Psychology",
+  "url": "https://cognitopsychology.com.au/",
+  "telephone": "0427498242",
+  "description": "Cognito Psychology provides evidence-based psychological support for individuals, couples, students, and professionals in Ultimo, NSW. The clinic offers therapy for anxiety, depression, trauma, OCD, ADHD, eating disorders, work\u2013life balance, and relationship challenges. Both in-clinic and telehealth counselling are available, ensuring accessible care tailored to each client\u2019s wellbeing.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Level 6, Suite 114/330 Wattle St",
+    "addressLocality": "Ultimo",
+    "addressRegion": "NSW",
+    "postalCode": "2007",
+    "addressCountry": "AU"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -33.8792666,
+    "longitude": 151.1961293
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday"
+      ],
+      "opens": "09:00",
+      "closes": "17:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Tuesday"
+      ],
+      "opens": "09:00",
+      "closes": "17:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Wednesday"
+      ],
+      "opens": "09:00",
+      "closes": "17:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Thursday"
+      ],
+      "opens": "09:00",
+      "closes": "17:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Friday"
+      ],
+      "opens": "09:00",
+      "closes": "17:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Saturday"
+      ],
+      "opens": "09:00",
+      "closes": "13:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Sunday"
+      ],
+      "opens": "00:00",
+      "closes": "00:00"
+    }
+  ],
+  "medicalSpecialty": [
+    "Psychology",
+    "MentalHealth"
+  ],
+  "availableService": [
+    {
+      "@type": "MedicalTherapy",
+      "name": "Individual Therapy"
+    },
+    {
+      "@type": "MedicalTherapy",
+      "name": "Couples Therapy"
+    },
+    {
+      "@type": "MedicalTherapy",
+      "name": "University Student Support"
+    },
+    {
+      "@type": "MedicalTherapy",
+      "name": "Work-Life Balance Counselling"
+    },
+    {
+      "@type": "MedicalTherapy",
+      "name": "Trauma and PTSD Therapy"
+    },
+    {
+      "@type": "MedicalTherapy",
+      "name": "OCD Treatment"
+    },
+    {
+      "@type": "MedicalTherapy",
+      "name": "Anxiety Disorder Treatment"
+    },
+    {
+      "@type": "MedicalTherapy",
+      "name": "Depression Treatment"
+    },
+    {
+      "@type": "MedicalTherapy",
+      "name": "Eating Disorder Assessment and Treatment"
+    },
+    {
+      "@type": "MedicalTherapy",
+      "name": "ADHD Treatment"
+    },
+    {
+      "@type": "MedicalTherapy",
+      "name": "Telehealth Counselling"
+    },
+    {
+      "@type": "MedicalTherapy",
+      "name": "WorkCover and CTP Counselling"
+    }
+  ],
+  "areaServed": [
+    {
+      "@type": "Place",
+      "name": "Ultimo"
+    },
+    {
+      "@type": "Place",
+      "name": "Pyrmont"
+    },
+    {
+      "@type": "Place",
+      "name": "Darling Harbour"
+    },
+    {
+      "@type": "Place",
+      "name": "Camperdown"
+    },
+    {
+      "@type": "Place",
+      "name": "Broadway"
+    }
+  ],
+  "sameAs": [
+    "https://www.google.com/maps?cid=9942482361180713457"
+  ],
+  "priceRange": "$$"
+}

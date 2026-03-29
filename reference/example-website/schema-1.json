@@ -1,0 +1,103 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://cognitopsychology.com.au/",
+      "url": "https://cognitopsychology.com.au/",
+      "name": "Cognito Psychology | Female Psychologist Ultimo Sydney, CBD",
+      "isPartOf": {
+        "@id": "https://cognitopsychology.com.au/#website"
+      },
+      "about": {
+        "@id": "https://cognitopsychology.com.au/#organization"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://cognitopsychology.com.au/#primaryimage"
+      },
+      "image": {
+        "@id": "https://cognitopsychology.com.au/#primaryimage"
+      },
+      "thumbnailUrl": "https://cognitopsychology.com.au/wp-content/uploads/star1.png",
+      "datePublished": "2024-07-02T10:20:57+00:00",
+      "dateModified": "2026-03-04T08:11:54+00:00",
+      "description": "At Cognito Psychology, we offer evidence-based therapy and counselling for adults, couples, and university students, with a focus on anxiety, depression, relationships, and more in Sydney CBD.",
+      "breadcrumb": {
+        "@id": "https://cognitopsychology.com.au/#breadcrumb"
+      },
+      "inLanguage": "en-AU",
+      "potentialAction": [
+        {
+          "@type": "ReadAction",
+          "target": [
+            "https://cognitopsychology.com.au/"
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "ImageObject",
+      "inLanguage": "en-AU",
+      "@id": "https://cognitopsychology.com.au/#primaryimage",
+      "url": "https://cognitopsychology.com.au/wp-content/uploads/star1.png",
+      "contentUrl": "https://cognitopsychology.com.au/wp-content/uploads/star1.png",
+      "width": 471,
+      "height": 472
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://cognitopsychology.com.au/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home"
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://cognitopsychology.com.au/#website",
+      "url": "https://cognitopsychology.com.au/",
+      "name": "Cognito Psychology",
+      "description": "Psychologist Ultimo, Sydney",
+      "publisher": {
+        "@id": "https://cognitopsychology.com.au/#organization"
+      },
+      "potentialAction": [
+        {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://cognitopsychology.com.au/?s={search_term_string}"
+          },
+          "query-input": {
+            "@type": "PropertyValueSpecification",
+            "valueRequired": true,
+            "valueName": "search_term_string"
+          }
+        }
+      ],
+      "inLanguage": "en-AU"
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://cognitopsychology.com.au/#organization",
+      "name": "Cognito Psychology",
+      "url": "https://cognitopsychology.com.au/",
+      "logo": {
+        "@type": "ImageObject",
+        "inLanguage": "en-AU",
+        "@id": "https://cognitopsychology.com.au/#/schema/logo/image/",
+        "url": "https://cognitopsychology.com.au/wp-content/uploads/Cognito-Psychology-Finished-Logo8.png",
+        "contentUrl": "https://cognitopsychology.com.au/wp-content/uploads/Cognito-Psychology-Finished-Logo8.png",
+        "width": 400,
+        "height": 131,
+        "caption": "Cognito Psychology"
+      },
+      "image": {
+        "@id": "https://cognitopsychology.com.au/#/schema/logo/image/"
+      }
+    }
+  ]
+}

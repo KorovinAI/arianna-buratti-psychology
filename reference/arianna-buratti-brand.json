@@ -1,0 +1,226 @@
+{
+  "_meta": {
+    "version": "1.0.0",
+    "updated": "2026-03-29",
+    "source": "meyers-flowers.com website extraction — rebranded for Arianna Buratti, Psychologist",
+    "notes": "Values marked [AI_DEFAULT] are design recommendations, not official specs. Values marked [NEEDS_CONFIRM] require user decision. Colors and visual design sourced from meyers-flowers.com; all identity, copy, and content adapted for Arianna Buratti psychology practice."
+  },
+
+  "identity": {
+    "brand_name": "Arianna Buratti",
+    "legal_entity": "[NEEDS_CONFIRM]",
+    "tagline": "Psychologist",
+    "value_proposition_short": "Arianna Buratti is a psychologist offering compassionate, evidence-based care to help individuals navigate life's challenges and achieve lasting wellbeing.",
+    "value_proposition_mission": "Arianna Buratti provides personalized psychological services grounded in empathy and clinical expertise, empowering clients to build resilience, deepen self-understanding, and create meaningful change in their lives.",
+    "logo": {
+      "primary": {
+        "description": "Horizontal wordmark — 'Arianna Buratti' in serif typography, clean and elegant",
+        "file": null,
+        "files_available": ["[NEEDS_CONFIRM]"],
+        "min_width_px": 120,
+        "usage_notes": "Use approved artwork only. Black version on light backgrounds, white version on dark backgrounds. No recolor, distort, or effects."
+      },
+      "icon": {
+        "description": "No standalone icon mark identified — wordmark is the primary identity element",
+        "file": null,
+        "usage_notes": "Use wordmark at all sizes. If a favicon is needed, consider 'AB' monogram in brand serif."
+      }
+    }
+  },
+
+  "colors": {
+    "primary": {
+      "gold":          { "hex": "#AB8133", "rgb": [171, 129, 51],  "role": "Main accent, CTAs, highlights, links" }
+    },
+    "supporting_gold": {
+      "gold_light":    { "hex": "#DBAB51", "rgb": [219, 171, 81],  "role": "Light gold / gradient start / hover alt" },
+      "gold_gradient": { "css": "linear-gradient(135deg, #DBAB51, #AB8133)", "role": "Button fills, accent bars, decorative elements" }
+    },
+    "neutrals_dark": {
+      "black":         { "hex": "#000000", "rgb": [0, 0, 0],       "role": "Primary text, headers, dark backgrounds" },
+      "charcoal":      { "hex": "#1A1818", "rgb": [26, 24, 24],    "role": "Body text, dark section backgrounds" },
+      "dark_alt":      { "hex": "#191818", "rgb": [25, 24, 24],    "role": "Footer backgrounds, overlay base" },
+      "mid_grey":      { "hex": "#7C7C7C", "rgb": [124, 124, 124], "role": "Muted text, meta, timestamps" },
+      "light_grey":    { "hex": "#BBBBBB", "rgb": [187, 187, 187], "role": "Borders, dividers, placeholder text" }
+    },
+    "neutrals_light": {
+      "warm_white":    { "hex": "#F0EDE9", "rgb": [240, 237, 233], "role": "Section backgrounds, card fills, warm neutral" },
+      "white":         { "hex": "#FFFFFF", "rgb": [255, 255, 255], "role": "Page background, card background, inverse text" }
+    },
+    "status": {
+      "success":       { "hex": "#00CC00", "role": "Success / positive" },
+      "warning":       { "hex": "#CC6600", "role": "Warning / caution" },
+      "error":         { "hex": "#CC0000", "role": "Error / destructive" }
+    },
+    "mapping": {
+      "_note": "[AI_DEFAULT] Recommended semantic mapping for layouts",
+      "background_light_primary": "#FFFFFF",
+      "background_light_secondary": "#F0EDE9",
+      "background_card": "#FFFFFF",
+      "background_card_alt": "#F0EDE9",
+      "background_dark_primary": "#1A1818",
+      "background_dark_secondary": "#000000",
+      "text_heading": "#000000",
+      "text_body": "#1A1818",
+      "text_muted": "#7C7C7C",
+      "cta_fill": "#AB8133",
+      "cta_text": "#FFFFFF",
+      "cta_hover": "#DBAB51",
+      "cta_hover_alt": "#8A6929",
+      "link_color": "#AB8133"
+    },
+    "rules": [
+      "Gold is the sole accent color — never introduce additional hues. The brand is deliberately restrained: gold + black + white.",
+      "Use warm white (#F0EDE9) for section alternation, not pure grey.",
+      "Dark backgrounds (#1A1818 or #000000) pair exclusively with white text and gold accents.",
+      "Limit to 3 colors (plus neutrals) per composition — the brand leans on contrast, not variety."
+    ]
+  },
+
+  "typography": {
+    "fonts": {
+      "heading": {
+        "name": "Noto Serif Display",
+        "type": "serif",
+        "weights": ["Regular", "Medium", "Semibold", "Bold"],
+        "max_weights_per_layout": 2,
+        "web_fallback": "\"Noto Serif Display\", Times, \"Times New Roman\", serif",
+        "google_fonts_url": "https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@400;500;600;700&display=swap"
+      },
+      "body": {
+        "name": "Mona Sans",
+        "type": "sans-serif",
+        "weights": ["Regular", "Medium", "Semibold", "Bold"],
+        "web_fallback": "\"Mona Sans\", Helvetica, Arial, sans-serif",
+        "source_note": "Mona Sans is a GitHub open-source font — may need self-hosting"
+      },
+      "display_accent": {
+        "name": "Noto Serif Display",
+        "type": "serif",
+        "usage": "Hero headlines, pull quotes, section titles. The serif creates a warm, professional tone.",
+        "web_fallback": "\"Noto Serif Display\", Times, \"Times New Roman\", serif"
+      },
+      "pdf_deck_fallback": {
+        "_note": "[AI_DEFAULT] When custom fonts cannot be embedded",
+        "sans": "Helvetica",
+        "sans_alt": "Arial",
+        "serif": "Georgia"
+      }
+    },
+    "scale": {
+      "_note": "[AI_DEFAULT] rem-based, 16px base",
+      "h1": { "size_rem": "2.5–3.0", "size_px": "40–48" },
+      "h2": { "size_rem": "2.0–2.25", "size_px": "32–36" },
+      "h3": { "size_rem": "1.5–1.75", "size_px": "24–28" },
+      "body": { "size_rem": "1.0", "size_px": "16" },
+      "small": { "size_rem": "0.875", "size_px": "14" }
+    },
+    "rhythm": {
+      "headings": { "line_height": "1.3–1.35", "letter_spacing": "0–0.01em" },
+      "body": { "line_height": "1.5–1.6", "letter_spacing": "0–0.01em" }
+    },
+    "rules": [
+      "Serif (Noto Serif Display) is for headlines and display text only — never for body copy.",
+      "Sans (Mona Sans) handles all body text, UI labels, navigation, and small text.",
+      "Buttons use uppercase, bold (700 weight), sans-serif."
+    ]
+  },
+
+  "spacing": {
+    "_note": "[AI_DEFAULT] Practical defaults derived from site observation",
+    "page_margins_pdf": { "top": "0.75in", "bottom": "0.75in", "left": "1.0in", "right": "1.0in" },
+    "deck_safe_margins_px": "40–56",
+    "section_padding_html": { "desktop": "72px", "mobile": "48px" },
+    "content_max_width_html": "1120px",
+    "grid": {
+      "html": { "columns": 12, "gutter_px": 24 },
+      "one_pager_pdf": { "columns": 2, "split": "65/35 or 60/40" }
+    }
+  },
+
+  "visual_elements": {
+    "border_radius": {
+      "buttons": "10px",
+      "cards": "4px",
+      "inputs": "10px"
+    },
+    "shadows": {
+      "form_fields": "0 0 10px rgba(0, 0, 0, 0.2)",
+      "usage": "Minimal — mostly flat. Shadow only on interactive elements like forms."
+    },
+    "dividers": {
+      "style": "Decorative divider element — clean and elegant",
+      "color_options": ["#AB8133", "#DBAB51", "#BBBBBB"],
+      "notes": "Gold dividers for accent, light grey for neutral separation"
+    },
+    "icons": {
+      "ui": "Simple, flat, monochrome — gold on dark or dark on light",
+      "marketing": "Minimal use; photography-forward brand"
+    },
+    "backgrounds": {
+      "patterns": "Dark photo backgrounds with gradient overlays (black to transparent)",
+      "textures": "None — clean and minimal",
+      "overlay_style": "Dark gradient overlays on hero/banner images for text legibility"
+    },
+    "animation": {
+      "scroll_effects": "Subtle scroll animation on desktop for hero text",
+      "transitions": "Subtle, professional — no playful or bouncy effects"
+    }
+  },
+
+  "asset_overrides": {
+    "html_landing_page": {
+      "header": "Top nav: logo left, text links center/right, single gold CTA button right. Dark background or transparent overlay.",
+      "cta_button": { "fill": "#AB8133", "text": "#FFFFFF", "radius": "10px", "hover": "#DBAB51", "style": "uppercase, bold, 2px border" },
+      "hero": "Full-bleed dark photography with gradient overlay + large serif headline in white + gold accent",
+      "inline_images": "Professional photography, subtle shadow, warm-toned",
+      "footer": "Dark background (#191818), white text, gold accent links. Contact details + social icons.",
+      "tone": "Warm, professional, trust-building. Strong serif headlines, concise body copy, clear gold CTAs."
+    },
+    "one_pager_pdf": {
+      "header": "Logo top-left, doc title top-right in serif; optional gold accent bar",
+      "footer": "Single line: logo (small) + copyright + contact + page number",
+      "contact_bar": "Bottom strip: white text on charcoal; left: contact info; right: page X of Y",
+      "images": "Professional, warm-toned photography. No full-bleed except cover.",
+      "tone": "Concise, professional, scannable. Clinical clarity with accessible, empathetic language."
+    },
+    "deck_pptx": {
+      "title_slide": "Large H1 (Noto Serif Display), gold accent bar, logo in corner. Dark or white bg.",
+      "content_slides": "Logo + slide number in footer only. One idea per slide, minimal text.",
+      "closing_slide": "Big serif heading ('Your wellbeing, your path.'), gold CTA bar, contact info.",
+      "images": "Full-bleed warm photography for cover/showcase; inset with gold borders otherwise.",
+      "footer": "Slide number + logo in bottom bar",
+      "tone": "Narrative, visual-heavy. Each slide = one idea. Warm, professional aesthetic."
+    }
+  },
+
+  "content_defaults": {
+    "contact": {
+      "name": "Arianna Buratti",
+      "title": "Psychologist",
+      "phone": "[NEEDS_CONFIRM]",
+      "email": "[NEEDS_CONFIRM]",
+      "website": "[NEEDS_CONFIRM]"
+    },
+    "social": {
+      "website": "[NEEDS_CONFIRM]",
+      "linkedin": "[NEEDS_CONFIRM]",
+      "instagram": "[NEEDS_CONFIRM]"
+    },
+    "boilerplate_short": "Arianna Buratti is a psychologist providing compassionate, evidence-based care to help individuals navigate life's challenges and achieve lasting wellbeing.",
+    "boilerplate_mission": "Arianna Buratti provides personalized psychological services grounded in empathy and clinical expertise, empowering clients to build resilience, deepen self-understanding, and create meaningful change in their lives.",
+    "legal_line": "© Arianna Buratti. All rights reserved.",
+    "legal_disclaimer": "This website is for informational purposes only and does not constitute psychological or medical advice. No therapeutic relationship is formed by use of this site.",
+    "cta_options": {
+      "primary": ["Book a Session", "Get in Touch", "Schedule a Consultation"],
+      "secondary": ["Learn More", "About My Approach", "Read Testimonials"]
+    }
+  },
+
+  "references": {
+    "design_source": "Visual design system sourced from meyers-flowers.com",
+    "google_fonts_noto_serif": "https://fonts.google.com/specimen/Noto+Serif+Display",
+    "mona_sans_source": "https://github.com/github/mona-sans",
+    "_note": "Mona Sans requires self-hosting or GitHub CDN — not on Google Fonts"
+  }
+}
