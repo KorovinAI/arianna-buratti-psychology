@@ -1,0 +1,104 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import IssuesList from '../components/IssuesList.astro';
+import FooterCta from '../components/FooterCta.astro';
+
+const issues = [
+  'ADHD', 'Anger Management', 'Anxiety', 'Behaviour Problems', 'Bipolar Disorder',
+  'Conduct Disorders', 'Depression', 'Eating Disorders', 'Grief &amp; Loss',
+  'Health Anxiety', 'OCD', 'Panic Attacks', 'Personality Disorders',
+  'Relationship Difficulties', 'Self-Esteem', 'Sleep Disorders',
+  'Stress &amp; Burnout', 'Trauma &amp; PTSD', 'Workplace Stress'
+];
+---
+
+<BaseLayout
+  title="About Arianna — Registered Psychologist in Carlton, Melbourne"
+  description="Arianna Buratti is a registered psychologist in Carlton, Melbourne, specialising in evidence-based therapy for anxiety, depression, ADHD, relationships, and personality challenges."
+  activeNav="about"
+>
+
+  <Hero
+    title="About Arianna"
+    subtitle="Registered Psychologist in Carlton, Melbourne"
+    image="/images/room-4.webp"
+  />
+
+  <!-- Bio Section -->
+  <section class="section">
+    <div class="container about-teaser">
+      <img
+        src="/images/arianna-headshot.jpeg"
+        srcset="/images/arianna-headshot-400w.jpeg 400w, /images/arianna-headshot-800w.jpeg 800w, /images/arianna-headshot.jpeg 2764w"
+        sizes="(max-width: 768px) 100vw, 45vw"
+        alt="Arianna Buratti, Psychologist"
+        class="about-teaser__image"
+        loading="lazy"
+      />
+      <div class="content-section">
+        <h2>Arianna Buratti</h2>
+        <p class="text-gold" style="font-weight: 500; margin-bottom: 0.5rem;">Registered Psychologist &bull; MAPS &bull; AHPRA</p>
+        <hr class="divider" />
+        <p>I'm a registered psychologist based in Carlton, Melbourne, with years of experience in the mental health space. I bring a deep understanding of the complexities of human behaviour across various cultural and socioeconomic backgrounds.</p>
+        <p>My commitment to inclusivity and tailored therapeutic approaches means that every client receives care that is personalised to their unique needs, goals, and circumstances.</p>
+        <p>I work with individuals and families, with a focus on relationship dynamics, personality challenges, ADHD, anxiety, and depression. I also offer sessions in Italian for clients who prefer it.</p>
+        <p>I'm registered with AHPRA (Australian Health Practitioner Regulation Agency) and a proud member of the Australian Psychological Society (APS).</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Therapeutic Approaches -->
+  <section class="section section--warm">
+    <div class="container">
+      <div class="text-center section-header">
+        <h2>My Therapeutic Approach</h2>
+        <hr class="divider divider--center" />
+        <p class="text-muted" style="max-width: 640px; margin: 0 auto;">I draw from a range of evidence-based approaches, tailoring each session to what works best for you.</p>
+      </div>
+      <div class="approach-grid">
+        <div class="approach-item"><h4>Cognitive Behavioural Therapy (CBT)</h4><p>Identifying and changing unhelpful thought patterns and behaviours.</p></div>
+        <div class="approach-item"><h4>Dialectical Behaviour Therapy (DBT)</h4><p>Building skills for emotional regulation, distress tolerance, and mindfulness.</p></div>
+        <div class="approach-item"><h4>Acceptance &amp; Commitment Therapy (ACT)</h4><p>Developing psychological flexibility and values-based living.</p></div>
+        <div class="approach-item"><h4>Schema Therapy</h4><p>Addressing deep-rooted patterns and unmet emotional needs.</p></div>
+        <div class="approach-item"><h4>Trauma-Informed Practice</h4><p>Safe, sensitive approaches to processing trauma and building resilience.</p></div>
+        <div class="approach-item"><h4>Solution-Focused Brief Therapy</h4><p>Goal-oriented strategies for creating positive change efficiently.</p></div>
+        <div class="approach-item"><h4>Interpersonal Therapy (IPT)</h4><p>Improving communication and relationship patterns to ease emotional distress.</p></div>
+        <div class="approach-item"><h4>Mindfulness-Based Cognitive Therapy</h4><p>Combining cognitive therapy with mindfulness techniques to prevent relapse.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who I Work With -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: 32px;">
+        <h2>Who I Work With</h2>
+        <hr class="divider divider--center" />
+      </div>
+      <div class="tags" style="justify-content: center; max-width: 720px; margin: 0 auto;">
+        <span class="tag">Adults</span>
+        <span class="tag">Young Adults</span>
+        <span class="tag">Older Adults</span>
+        <span class="tag">Families</span>
+        <span class="tag">LGBTQIA+</span>
+        <span class="tag">Culturally Diverse Communities</span>
+        <span class="tag">Italian Speaking</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Issues I Help With -->
+  <section class="section section--warm">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: 32px;">
+        <h2>Issues I Help With</h2>
+        <hr class="divider divider--center" />
+      </div>
+      <IssuesList items={issues} />
+    </div>
+  </section>
+
+  <FooterCta />
+
+</BaseLayout>

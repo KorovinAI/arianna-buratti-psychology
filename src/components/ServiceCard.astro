@@ -1,0 +1,27 @@
+---
+export interface Props {
+  href: string;
+  image: string;       // absolute path
+  image400?: string;   // optional smaller variant for srcset
+  imageAlt: string;
+  title: string;
+  description: string;
+}
+
+const { href, image, image400, imageAlt, title, description } = Astro.props;
+---
+
+<a href={href} class="card">
+  <img
+    src={image}
+    srcset={image400 ? `${image400} 400w, ${image} 800w` : undefined}
+    sizes="(max-width: 768px) 100vw, 33vw"
+    alt={imageAlt}
+    class="card__image"
+    loading="lazy"
+  />
+  <div class="card__body">
+    <h3>{title}</h3>
+    <p>{description}</p>
+  </div>
+</a>

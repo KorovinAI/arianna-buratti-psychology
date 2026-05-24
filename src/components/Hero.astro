@@ -1,0 +1,26 @@
+---
+export interface Props {
+  title: string;
+  subtitle?: string;
+  image: string;        // absolute path under /images/, e.g. "/images/room-6.webp"
+  variant?: 'home' | 'page'; // 'home' = tall hero with CTAs slot; 'page' = compact page hero
+}
+
+const { title, subtitle, image, variant = 'page' } = Astro.props;
+const sectionClass = variant === 'home' ? 'hero' : 'hero hero--page';
+---
+
+<section class={sectionClass} style={`background-image: url('${image}');`}>
+  <img class="hero__mobile-image" src={image} alt="" loading="lazy" />
+  <div class="container">
+    <div class="hero__content">
+      <h1>{title}</h1>
+      {subtitle && <p>{subtitle}</p>}
+      {variant === 'home' && (
+        <div class="hero__buttons">
+          <slot />
+        </div>
+      )}
+    </div>
+  </div>
+</section>

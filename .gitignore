@@ -1,0 +1,40 @@
+# Astro
+dist/
+.astro/
+
+# Dependencies
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Env
+.env
+.env.production
+.env.local
+.env.*.local
+
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/settings.json
+.idea/
+
+# Local Netlify folder
+.netlify/
+
+# Local Claude preview
+.claude/launch.json
+
+# Working scratch — not deployed
+reference/logos/
+reference/temp - mobile website issues/
+public/images/logo-full.svg

@@ -1,0 +1,83 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+import FooterCta from '../../components/FooterCta.astro';
+---
+
+<BaseLayout
+  title="Services — Arianna Buratti, Psychologist"
+  description="Psychological services with Arianna Buratti in Carlton, Melbourne. Individual therapy, relationship work, ADHD support, anxiety, depression, and personality disorder care."
+  activeNav="services"
+>
+
+  <Hero
+    title="Services"
+    subtitle="Evidence-based psychological support tailored to your needs."
+    image="/images/room-4.webp"
+  />
+
+  <section class="section">
+    <div class="container">
+      <div class="text-center section-header">
+        <h2>How I Can Help</h2>
+        <hr class="divider divider--center" />
+        <p class="text-muted" style="max-width: 640px; margin: 0 auto;">I offer a range of evidence-based psychological services. Each session is tailored to your individual needs, goals, and circumstances.</p>
+      </div>
+      <div class="grid grid--3">
+        <ServiceCard
+          href="/services/individual-therapy/"
+          image="/images/service-individual.jpg"
+          image400="/images/service-individual-400w.jpg"
+          imageAlt="Individual therapy session"
+          title="Individual Therapy"
+          description="One-on-one support for adults and young adults navigating anxiety, depression, stress, self-esteem, and life transitions."
+        />
+        <ServiceCard
+          href="/services/relationship-work/"
+          image="/images/service-relationships.jpg"
+          image400="/images/service-relationships-400w.jpg"
+          imageAlt="Relationship reflection"
+          title="Relationship Work"
+          description="Helping individuals understand and improve their relationship patterns, navigate conflict, and build healthier connections."
+        />
+        <ServiceCard
+          href="/services/adhd/"
+          image="/images/service-adhd.jpg"
+          image400="/images/service-adhd-400w.jpg"
+          imageAlt="Focus and clarity"
+          title="ADHD"
+          description="Counselling and support for adults and children living with attention deficit and hyperactivity-related challenges."
+        />
+        <ServiceCard
+          href="/services/anxiety-depression/"
+          image="/images/service-anxiety.jpg"
+          image400="/images/service-anxiety-400w.jpg"
+          imageAlt="Hope and recovery"
+          title="Anxiety & Depression"
+          description="Effective strategies for managing anxiety, low mood, panic attacks, and building long-term emotional wellbeing."
+        />
+        <ServiceCard
+          href="/services/personality-disorders/"
+          image="/images/service-personality.jpg"
+          image400="/images/service-personality-400w.jpg"
+          imageAlt="Supportive environment"
+          title="Personality Disorders"
+          description="Support, counselling, and screening assessments for individuals experiencing personality disorder-related challenges."
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--warm">
+    <div class="container text-center">
+      <h2>Telehealth Available</h2>
+      <hr class="divider divider--center" />
+      <p style="max-width: 640px; margin: 0 auto 1.5rem;">All services are also available via secure video sessions for clients across Australia.</p>
+      <a href="/telehealth/" class="btn btn--secondary">Learn About Telehealth</a>
+    </div>
+  </section>
+
+  <FooterCta />
+
+</BaseLayout>

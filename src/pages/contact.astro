@@ -1,0 +1,88 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<BaseLayout
+  title="Contact — Arianna Buratti, Psychologist"
+  description="Get in touch with Arianna Buratti, registered psychologist in Carlton, Melbourne. Phone, email, or send a message via the contact form."
+  activeNav="contact"
+>
+
+  <Hero
+    title="Get in Touch"
+    subtitle="I'd love to hear from you. Send a message or give me a call to book a session."
+    image="/images/front.webp"
+  />
+
+  <!-- Contact Form + Details -->
+  <section class="section">
+    <div class="container grid grid--1-1" style="gap: 48px;">
+      <!-- Form -->
+      <div>
+        <h2>Send a Message</h2>
+        <hr class="divider" />
+        <p class="text-muted" style="margin-bottom: 1.5rem;">Fill out the form below and I'll get back to you within one business day.</p>
+        <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" id="contactForm">
+          <input type="hidden" name="form-name" value="contact" />
+          <p style="display: none;">
+            <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+          </p>
+          <div class="form-group">
+            <label for="name">Full Name *</label>
+            <input type="text" id="name" name="name" class="form-input" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" class="form-input" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" class="form-input" />
+          </div>
+          <div class="form-group">
+            <label for="preferred-time">Preferred Day / Time</label>
+            <input type="text" id="preferred-time" name="preferred_time" class="form-input" placeholder="e.g. Saturday mornings, weekday evenings" />
+          </div>
+          <div class="form-group">
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" class="form-textarea" required placeholder="Tell me a little about what you're looking for help with..."></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary">Send Message</button>
+        </form>
+        <div id="formSuccess" style="display: none; padding: 24px; background: var(--warm-white); border-radius: 4px; margin-top: 16px;">
+          <h3 style="color: var(--gold);">Message Sent</h3>
+          <p>Thank you for reaching out. I'll be in touch within one business day.</p>
+        </div>
+      </div>
+
+      <!-- Contact Details -->
+      <div>
+        <h2>Contact Details</h2>
+        <hr class="divider" />
+        <div style="margin-bottom: 2rem;">
+          <h3 style="font-size: 1.125rem;">Phone</h3>
+          <p><a href="tel:0490786047" style="font-size: 1.25rem; font-weight: 600;">0490 786 047</a></p>
+        </div>
+        <div style="margin-bottom: 2rem;">
+          <h3 style="font-size: 1.125rem;">Email</h3>
+          <p><a href="mailto:info@ab-psych.com.au">info@ab-psych.com.au</a></p>
+        </div>
+        <div style="margin-bottom: 2rem;">
+          <h3 style="font-size: 1.125rem;">Location</h3>
+          <p>Carlton Counselling Rooms<br />165–167 Drummond Street<br />Carlton VIC 3053</p>
+        </div>
+        <div style="margin-bottom: 2rem;">
+          <h3 style="font-size: 1.125rem;">Hours</h3>
+          <p>Monday – Saturday<br />9:00am – 8:00pm</p>
+        </div>
+        <div style="margin-bottom: 2rem;">
+          <h3 style="font-size: 1.125rem;">Getting Here</h3>
+          <p class="text-muted" style="font-size: 0.9375rem;">On-street and off-street parking available. Close to tram routes along Elgin Street and Nicholson Street, and a short walk from Melbourne University.</p>
+        </div>
+        <iframe class="map-embed" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3152.5!2d144.969!3d-37.8005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642cb2d9b3b1f%3A0x0!2s165-167+Drummond+St%2C+Carlton+VIC+3053!5e0!3m2!1sen!2sau!4v1" allowfullscreen loading="lazy" title="Map showing Carlton Counselling Rooms location"></iframe>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

@@ -1,0 +1,24 @@
+---
+export interface Props {
+  title?: string;
+  body?: string;
+  buttonLabel?: string;
+  buttonHref?: string;
+}
+
+const {
+  title = 'Ready to Take the First Step?',
+  body = "I'm here to help. Reach out to book a session or ask any questions.",
+  buttonLabel = 'Get in Touch',
+  buttonHref = '/contact/',
+} = Astro.props;
+---
+
+<section class="footer-cta">
+  <div class="container">
+    <h2>{title}</h2>
+    <p class="text-muted">{body}</p>
+    <a href="tel:0490786047" class="phone">0490 786 047</a>
+    <a href={buttonHref} class="btn btn--primary">{buttonLabel}</a>
+  </div>
+</section>

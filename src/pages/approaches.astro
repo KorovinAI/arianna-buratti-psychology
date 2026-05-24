@@ -1,0 +1,81 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<BaseLayout
+  title="Therapeutic Approaches — Arianna Buratti, Psychologist"
+  description="Evidence-based therapeutic approaches used by Arianna Buratti: CBT, DBT, ACT, Schema Therapy, Interpersonal Therapy, and more."
+  activeNav="approaches"
+>
+
+  <Hero
+    title="Therapeutic Approaches"
+    subtitle="Evidence-based methods tailored to your needs."
+    image="/images/room-8.webp"
+  />
+
+  <section class="section">
+    <div class="container content-section" style="max-width: 800px;">
+      <h2>How I Work</h2>
+      <hr class="divider" />
+      <p>I draw from a range of evidence-based therapeutic approaches, selecting and combining methods based on what will be most effective for your specific situation. There is no one-size-fits-all in therapy — the approach should fit the person, not the other way around.</p>
+      <p>Here are the main approaches I use in my practice:</p>
+    </div>
+  </section>
+
+  <section class="section section--warm">
+    <div class="container" style="max-width: 800px;">
+      <div class="approach-item" style="margin-bottom: 24px;">
+        <h3>Cognitive Behavioural Therapy (CBT)</h3>
+        <p>CBT is one of the most widely researched and effective forms of therapy. It focuses on identifying unhelpful thought patterns and behaviours that contribute to emotional distress, and replacing them with more balanced, constructive ones.</p>
+        <p class="text-muted" style="font-size: 0.875rem; margin-top: 0.5rem;"><strong>Best for:</strong> Anxiety, depression, OCD, panic attacks, phobias, stress management</p>
+      </div>
+      <div class="approach-item" style="margin-bottom: 24px;">
+        <h3>Dialectical Behaviour Therapy (DBT)</h3>
+        <p>Originally developed for borderline personality disorder, DBT teaches skills in four key areas: mindfulness, emotional regulation, distress tolerance, and interpersonal effectiveness. It's particularly helpful for managing intense emotions.</p>
+        <p class="text-muted" style="font-size: 0.875rem; margin-top: 0.5rem;"><strong>Best for:</strong> Emotional instability, personality disorders, self-harm, intense mood swings, relationship difficulties</p>
+      </div>
+      <div class="approach-item" style="margin-bottom: 24px;">
+        <h3>Acceptance &amp; Commitment Therapy (ACT)</h3>
+        <p>ACT helps you develop psychological flexibility — the ability to stay present, accept difficult thoughts and feelings without being controlled by them, and take action guided by your personal values.</p>
+        <p class="text-muted" style="font-size: 0.875rem; margin-top: 0.5rem;"><strong>Best for:</strong> Anxiety, depression, chronic pain, stress, life transitions, values clarification</p>
+      </div>
+      <div class="approach-item" style="margin-bottom: 24px;">
+        <h3>Schema Therapy</h3>
+        <p>Schema Therapy addresses deep-rooted patterns (schemas) that typically develop in childhood and continue to affect how you relate to yourself and others in adulthood. It combines elements of CBT, attachment theory, and experiential techniques.</p>
+        <p class="text-muted" style="font-size: 0.875rem; margin-top: 0.5rem;"><strong>Best for:</strong> Personality disorders, chronic relationship patterns, long-standing emotional difficulties, self-esteem issues</p>
+      </div>
+      <div class="approach-item" style="margin-bottom: 24px;">
+        <h3>Interpersonal Therapy (IPT)</h3>
+        <p>IPT focuses on improving the quality of your relationships and communication patterns. It recognises that our mental health is deeply connected to how we relate to the people around us.</p>
+        <p class="text-muted" style="font-size: 0.875rem; margin-top: 0.5rem;"><strong>Best for:</strong> Depression, relationship difficulties, grief, life role transitions, social isolation</p>
+      </div>
+      <div class="approach-item" style="margin-bottom: 24px;">
+        <h3>Mindfulness-Based Cognitive Therapy (MBCT)</h3>
+        <p>MBCT combines traditional cognitive therapy with mindfulness meditation practices. It teaches you to become more aware of your thoughts and feelings and to relate to them in a different, less reactive way.</p>
+        <p class="text-muted" style="font-size: 0.875rem; margin-top: 0.5rem;"><strong>Best for:</strong> Recurrent depression, anxiety, rumination, stress, relapse prevention</p>
+      </div>
+      <div class="approach-item" style="margin-bottom: 24px;">
+        <h3>Solution-Focused Brief Therapy (SFBT)</h3>
+        <p>SFBT is a goal-oriented approach that focuses on solutions rather than problems. It helps you identify what's already working and build on your existing strengths to create positive change efficiently.</p>
+        <p class="text-muted" style="font-size: 0.875rem; margin-top: 0.5rem;"><strong>Best for:</strong> Short-term goals, motivation, confidence building, problem-solving, transition support</p>
+      </div>
+      <div class="approach-item" style="margin-bottom: 24px;">
+        <h3>Trauma-Informed Practice</h3>
+        <p>A trauma-informed approach recognises the widespread impact of trauma and integrates this understanding into every aspect of therapy. It prioritises safety, trustworthiness, and empowerment in the therapeutic relationship.</p>
+        <p class="text-muted" style="font-size: 0.875rem; margin-top: 0.5rem;"><strong>Best for:</strong> PTSD, complex trauma, abuse recovery, dissociation, hypervigilance</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container content-section text-center" style="max-width: 640px;">
+      <h2>Not Sure What You Need?</h2>
+      <hr class="divider divider--center" />
+      <p>You don't need to know which approach is right for you before starting. In our first session, we'll discuss your concerns together and I'll recommend the approach — or combination of approaches — that best fits your situation.</p>
+      <a href="/contact/" class="btn btn--primary" style="margin-top: 1rem;">Get in Touch</a>
+    </div>
+  </section>
+
+</BaseLayout>

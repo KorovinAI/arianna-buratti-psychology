@@ -1,0 +1,73 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import FooterCta from '../components/FooterCta.astro';
+---
+
+<BaseLayout
+  title="Telehealth — Arianna Buratti, Psychologist"
+  description="Telehealth psychology sessions with Arianna Buratti. Secure video sessions available Australia-wide. Same quality care from the comfort of your home."
+  activeNav="services"
+>
+
+  <Hero
+    title="Telehealth"
+    subtitle="Secure video sessions from the comfort of your home."
+    image="/images/room-4.webp"
+  />
+
+  <section class="section">
+    <div class="container content-section" style="max-width: 800px;">
+      <h2>Therapy From Anywhere in Australia</h2>
+      <hr class="divider" />
+      <p>All of my services are available via secure video call, making it easy to access psychological support regardless of where you are in Australia. Telehealth sessions follow the same structure, duration, and evidence-based approach as in-person sessions.</p>
+
+      <h3>Who Is Telehealth For?</h3>
+      <p>Telehealth may be a good fit if you:</p>
+      <ul>
+        <li>Live outside Melbourne or in a regional area</li>
+        <li>Have mobility or health challenges that make travel difficult</li>
+        <li>Prefer the comfort and privacy of your own space</li>
+        <li>Have a busy schedule and want to reduce travel time</li>
+        <li>Are already an existing client and want flexibility</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section--warm">
+    <div class="container content-section" style="max-width: 800px;">
+      <h2>How It Works</h2>
+      <hr class="divider" />
+
+      <div class="steps" style="margin-top: 32px; grid-template-columns: repeat(3, 1fr);">
+        <div class="step">
+          <div class="step__number">1</div>
+          <h3>Book a Session</h3>
+          <p>Get in touch to schedule a telehealth appointment. Mention that you'd prefer video when booking.</p>
+        </div>
+        <div class="step">
+          <div class="step__number">2</div>
+          <h3>Receive Your Link</h3>
+          <p>Before your session, you'll receive a secure video link via email. No software installation needed.</p>
+        </div>
+        <div class="step">
+          <div class="step__number">3</div>
+          <h3>Join Your Session</h3>
+          <p>Click the link at your appointment time. All you need is a device with a camera, microphone, and a quiet space.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container content-section" style="max-width: 800px;">
+      <h2>Fees &amp; Medicare</h2>
+      <hr class="divider" />
+      <p>Telehealth sessions are the same fee as in-person sessions ($220). Medicare rebates apply in the same way — you'll need a valid Mental Health Treatment Plan and GP referral.</p>
+      <p>For full details on fees and how to access Medicare rebates, see the <a href="/fees/">Fees &amp; Rebates</a> page.</p>
+    </div>
+  </section>
+
+  <FooterCta title="Ready to Book a Telehealth Session?" body="Get in touch to schedule your appointment." />
+
+</BaseLayout>

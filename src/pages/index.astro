@@ -1,0 +1,170 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import FooterCta from '../components/FooterCta.astro';
+---
+
+<BaseLayout
+  title="Arianna Buratti — Psychologist in Carlton, Melbourne"
+  description="Arianna Buratti is a registered psychologist in Carlton, Melbourne offering evidence-based therapy for anxiety, depression, ADHD, trauma, and more. Monday–Saturday, 9am–8pm."
+  activeNav="home"
+  includeSchemaOrg
+>
+
+  <Hero
+    title="Psychologist in Carlton, Melbourne"
+    subtitle="Compassionate, evidence-based care for individuals and families. Providing a safe space to navigate life's challenges and build lasting wellbeing."
+    image="/images/room-6.webp"
+    variant="home"
+  >
+    <a href="/contact/" class="btn btn--primary">Get in Touch</a>
+    <a href="/about/" class="btn btn--white">About My Approach</a>
+  </Hero>
+
+  <!-- Introduction -->
+  <section class="section section--warm">
+    <div class="container text-center">
+      <h2>Personalised Psychological Care</h2>
+      <hr class="divider divider--center" />
+      <p class="intro-text">I provide personalised psychological services grounded in empathy and clinical expertise, empowering clients to build resilience, deepen self-understanding, and create meaningful change in their lives.</p>
+      <p class="intro-subtext text-muted">Available Monday to Saturday, 9am–8pm. Sessions also available in Italian.</p>
+    </div>
+  </section>
+
+  <!-- About Teaser -->
+  <section class="section" id="about">
+    <div class="container about-teaser">
+      <img
+        src="/images/arianna-headshot.jpeg"
+        srcset="/images/arianna-headshot-400w.jpeg 400w, /images/arianna-headshot-800w.jpeg 800w, /images/arianna-headshot.jpeg 2764w"
+        sizes="(max-width: 768px) 100vw, 45vw"
+        alt="Arianna Buratti, Psychologist"
+        class="about-teaser__image"
+        loading="lazy"
+      />
+      <div>
+        <h2>Arianna Buratti</h2>
+        <p class="text-gold" style="font-weight: 500; margin-bottom: 0.5rem;">Registered Psychologist &bull; MAPS</p>
+        <hr class="divider" />
+        <p>With years of experience in the mental health space, I bring a deep understanding of the complexities of human behaviour across various cultural and socioeconomic backgrounds.</p>
+        <p>I'm committed to inclusivity and tailored therapeutic approaches, offering care for individuals and families. I also provide services in Italian for those who prefer it.</p>
+        <p>Registered with AHPRA and a member of the Australian Psychological Society (APS).</p>
+        <a href="/about/" class="btn btn--secondary">More About Arianna</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="section section--warm" id="services">
+    <div class="container">
+      <div class="text-center section-header">
+        <h2>How I Can Help</h2>
+        <hr class="divider divider--center" />
+        <p class="text-muted">Evidence-based support tailored to your needs</p>
+      </div>
+      <div class="grid grid--3">
+        <ServiceCard
+          href="/services/individual-therapy/"
+          image="/images/service-individual.jpg"
+          image400="/images/service-individual-400w.jpg"
+          imageAlt="Individual therapy session"
+          title="Individual Therapy"
+          description="One-on-one support for adults and young adults navigating anxiety, depression, stress, self-esteem, and life transitions."
+        />
+        <ServiceCard
+          href="/services/relationship-work/"
+          image="/images/service-relationships.jpg"
+          image400="/images/service-relationships-400w.jpg"
+          imageAlt="Relationship reflection"
+          title="Relationship Work"
+          description="Helping individuals understand and improve their relationship patterns, navigate conflict, and build healthier connections."
+        />
+        <ServiceCard
+          href="/services/adhd/"
+          image="/images/service-adhd.jpg"
+          image400="/images/service-adhd-400w.jpg"
+          imageAlt="Focus and clarity"
+          title="ADHD"
+          description="Counselling and support for adults and children living with attention deficit and hyperactivity-related challenges."
+        />
+        <ServiceCard
+          href="/services/anxiety-depression/"
+          image="/images/service-anxiety.jpg"
+          image400="/images/service-anxiety-400w.jpg"
+          imageAlt="Hope and recovery"
+          title="Anxiety & Depression"
+          description="Effective strategies for managing anxiety, low mood, panic attacks, and building long-term emotional wellbeing."
+        />
+        <ServiceCard
+          href="/services/personality-disorders/"
+          image="/images/service-personality.jpg"
+          image400="/images/service-personality-400w.jpg"
+          imageAlt="Supportive environment"
+          title="Personality Disorders"
+          description="Support, counselling, and screening assessments for individuals experiencing personality disorder-related challenges."
+        />
+      </div>
+      <p class="text-center text-muted" style="margin-top: 2rem;">Telehealth sessions also available for clients across Australia.</p>
+    </div>
+  </section>
+
+  <!-- What to Expect -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center section-header">
+        <h2>What to Expect</h2>
+        <hr class="divider divider--center" />
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step__number">1</div>
+          <h3>Get a Referral</h3>
+          <p>See your GP for a Mental Health Treatment Plan to access Medicare rebates.</p>
+        </div>
+        <div class="step">
+          <div class="step__number">2</div>
+          <h3>Get in Touch</h3>
+          <p>Contact me by phone, email, or through the online form to book your first session.</p>
+        </div>
+        <div class="step">
+          <div class="step__number">3</div>
+          <h3>First Session</h3>
+          <p>We'll discuss what brings you in, your goals, and begin building a tailored approach together.</p>
+        </div>
+        <div class="step">
+          <div class="step__number">4</div>
+          <h3>Ongoing Support</h3>
+          <p>Regular sessions at your pace, using evidence-based strategies to help you thrive.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location -->
+  <section class="section section--dark" id="location">
+    <div class="container location-grid">
+      <div class="location-info">
+        <h2>Find Me in Carlton</h2>
+        <hr class="divider" />
+        <h3>Carlton Counselling Rooms</h3>
+        <p>165–167 Drummond Street<br />Carlton VIC 3053</p>
+        <h3>Hours</h3>
+        <p>Monday – Saturday<br />9:00am – 8:00pm</p>
+        <h3>Contact</h3>
+        <p>
+          <a href="tel:0490786047" style="color: var(--gold-light);">0490 786 047</a><br />
+          <a href="mailto:info@ab-psych.com.au" style="color: var(--gold-light);">info@ab-psych.com.au</a>
+        </p>
+        <p class="text-muted note-text">On-street and off-street parking available. Close to tram routes and Melbourne University.</p>
+      </div>
+      <div>
+        <img src="/images/front.webp" alt="Carlton Counselling Rooms exterior" style="border-radius: 4px; margin-bottom: 16px; width: 100%;" loading="lazy" />
+        <iframe class="map-embed" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3152.5!2d144.969!3d-37.8005!2m3!1f0!2f0!3f0!3m2!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642cb2d9b3b1f%3A0x0!2s165-167+Drummond+St%2C+Carlton+VIC+3053!5e0!3m2!1sen!2sau!4v1" allowfullscreen loading="lazy" title="Map showing Carlton Counselling Rooms location"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <FooterCta />
+
+</BaseLayout>

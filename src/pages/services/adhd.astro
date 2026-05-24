@@ -1,0 +1,51 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import FooterCta from '../../components/FooterCta.astro';
+---
+
+<BaseLayout
+  title="ADHD Support — Arianna Buratti, Psychologist"
+  description="ADHD counselling and support with Arianna Buratti in Carlton, Melbourne. Helping adults and young people manage attention, focus, and hyperactivity challenges."
+  activeNav="services"
+>
+
+  <Hero
+    title="ADHD Support"
+    subtitle="Counselling and strategies for living well with ADHD."
+    image="/images/service-adhd.jpg"
+  />
+
+  <section class="section">
+    <div class="container content-section" style="max-width: 800px;">
+      <h2>Living With ADHD</h2>
+      <hr class="divider" />
+      <p>Attention Deficit Hyperactivity Disorder (ADHD) affects how you focus, organise, and regulate your energy and emotions. Whether you've been recently diagnosed or have been living with ADHD for years, counselling can help you develop practical strategies to manage daily life more effectively.</p>
+      <p>I provide counselling and support — not formal ADHD assessments — for individuals experiencing:</p>
+      <ul>
+        <li>Difficulty sustaining attention and focus</li>
+        <li>Impulsivity and emotional dysregulation</li>
+        <li>Challenges with time management and organisation</li>
+        <li>Procrastination and task avoidance</li>
+        <li>Low self-esteem related to ADHD</li>
+        <li>Relationship difficulties linked to ADHD patterns</li>
+        <li>Anxiety or depression co-occurring with ADHD</li>
+        <li>Workplace or study challenges</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section--warm">
+    <div class="container content-section" style="max-width: 800px;">
+      <h2>How I Can Help</h2>
+      <hr class="divider" />
+      <p>Using evidence-based approaches like <a href="/approaches/">CBT, ACT, and DBT</a>, we'll work together to build strategies that fit your life. This might include developing routines, improving emotional regulation, managing overwhelm, and building on your strengths.</p>
+      <p>ADHD often comes with co-occurring challenges like anxiety, depression, or relationship difficulties. I take a holistic approach, addressing the full picture rather than ADHD in isolation.</p>
+      <p>If you need a formal ADHD assessment, I can help guide you to the right professionals for diagnosis while providing ongoing counselling support.</p>
+      <p>Sessions are available in person or via <a href="/telehealth/">telehealth</a>.</p>
+    </div>
+  </section>
+
+  <FooterCta title="Ready to Start?" body="Reach out to book your first session or ask any questions." />
+
+</BaseLayout>

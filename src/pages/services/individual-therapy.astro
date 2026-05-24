@@ -1,0 +1,52 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import FooterCta from '../../components/FooterCta.astro';
+---
+
+<BaseLayout
+  title="Individual Therapy — Arianna Buratti, Psychologist"
+  description="Individual therapy with Arianna Buratti in Carlton, Melbourne. One-on-one support for anxiety, depression, stress, self-esteem, and life transitions."
+  activeNav="services"
+>
+
+  <Hero
+    title="Individual Therapy"
+    subtitle="One-on-one psychological support tailored to your needs."
+    image="/images/service-individual.jpg"
+  />
+
+  <section class="section">
+    <div class="container content-section" style="max-width: 800px;">
+      <h2>A Safe Space to Talk</h2>
+      <hr class="divider" />
+      <p>Individual therapy provides a confidential, supportive environment where you can explore your thoughts, feelings, and behaviours with a trained professional. Whether you're dealing with a specific issue or seeking personal growth, therapy offers the tools and space to make meaningful changes.</p>
+      <p>I work with adults and young adults on a wide range of concerns, including:</p>
+      <ul>
+        <li>Anxiety and worry</li>
+        <li>Depression and low mood</li>
+        <li>Stress and burnout</li>
+        <li>Self-esteem and confidence</li>
+        <li>Life transitions and adjustment</li>
+        <li>Grief and loss</li>
+        <li>Anger management</li>
+        <li>Sleep difficulties</li>
+        <li>Health anxiety</li>
+        <li>Work-life balance</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section--warm">
+    <div class="container content-section" style="max-width: 800px;">
+      <h2>What to Expect</h2>
+      <hr class="divider" />
+      <p>In our first session, we'll discuss what brings you in, your goals, and your history. Together, we'll develop a tailored treatment plan using evidence-based approaches such as CBT, ACT, DBT, and Schema Therapy.</p>
+      <p>Sessions are typically 50 minutes and can be held weekly or fortnightly depending on your needs. I aim to create a warm, non-judgmental space where you feel comfortable exploring difficult topics at your own pace.</p>
+      <p>I also offer <a href="/telehealth/">telehealth sessions</a> for clients who prefer to meet online.</p>
+    </div>
+  </section>
+
+  <FooterCta title="Ready to Start?" body="Reach out to book your first session or ask any questions." />
+
+</BaseLayout>

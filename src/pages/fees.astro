@@ -1,0 +1,109 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import FooterCta from '../components/FooterCta.astro';
+---
+
+<BaseLayout
+  title="Fees & Rebates — Arianna Buratti, Psychologist"
+  description="Session fees, Medicare rebates, and referral information for Arianna Buratti, psychologist in Carlton. $220 per session with $98.97 Medicare rebate available."
+  activeNav="fees"
+>
+
+  <Hero
+    title="Fees & Rebates"
+    subtitle="Transparent pricing and information about Medicare rebates."
+    image="/images/room-8.webp"
+  />
+
+  <!-- Fee Table -->
+  <section class="section">
+    <div class="container" style="max-width: 800px;">
+      <h2>Session Fees</h2>
+      <hr class="divider" />
+      <div class="fee-table-wrap">
+        <table class="fee-table">
+          <thead>
+            <tr>
+              <th>Service</th>
+              <th>Fee</th>
+              <th>Medicare Rebate</th>
+              <th>Out-of-Pocket</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Individual Session (50 min)</td>
+              <td class="fee-amount">$220</td>
+              <td class="fee-highlight">$98.97</td>
+              <td class="fee-amount">$121.03</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-muted" style="font-size: 0.875rem;">Payment is required at the time of the session. EFTPOS and bank transfer accepted.</p>
+    </div>
+  </section>
+
+  <!-- Medicare Information -->
+  <section class="section section--warm">
+    <div class="container" style="max-width: 800px;">
+      <h2>Accessing Medicare Rebates</h2>
+      <hr class="divider" />
+      <p>Under the Australian Government's Better Access initiative, you may be eligible for Medicare rebates for psychological services. Here's how it works:</p>
+
+      <div class="steps" style="margin-top: 32px; grid-template-columns: repeat(3, 1fr);">
+        <div class="step">
+          <div class="step__number">1</div>
+          <h3>Visit Your GP</h3>
+          <p>Ask your GP to prepare a Mental Health Treatment Plan (MHTP). This is a standard appointment.</p>
+        </div>
+        <div class="step">
+          <div class="step__number">2</div>
+          <h3>Get a Referral</h3>
+          <p>Your GP will provide a referral to a psychologist as part of the MHTP. Bring this to your first session.</p>
+        </div>
+        <div class="step">
+          <div class="step__number">3</div>
+          <h3>Claim Your Rebate</h3>
+          <p>After each session, you'll receive an invoice to claim your rebate through Medicare (online, app, or in person).</p>
+        </div>
+      </div>
+
+      <div style="margin-top: 32px; padding: 24px; background: var(--white); border-radius: 4px; border-left: 3px solid var(--gold);">
+        <h3 style="font-size: 1.125rem; margin-bottom: 0.5rem;">How many sessions can I claim?</h3>
+        <p style="margin-bottom: 0;">Under the current Medicare scheme, you can access up to <strong>10 individual sessions per calendar year</strong> with a valid Mental Health Treatment Plan and referral from your GP. Your GP will review your progress after the first 6 sessions.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- What to Bring -->
+  <section class="section">
+    <div class="container content-section" style="max-width: 800px;">
+      <h2>Your First Appointment</h2>
+      <hr class="divider" />
+      <p>Here's what to bring to your first session:</p>
+      <ul>
+        <li>Your Mental Health Treatment Plan and GP referral</li>
+        <li>Your Medicare card</li>
+        <li>Any relevant medical or psychological reports</li>
+        <li>A list of current medications (if applicable)</li>
+      </ul>
+      <p>The first session is an opportunity for us to get to know each other, discuss what brings you in, and begin shaping a plan for your care.</p>
+    </div>
+  </section>
+
+  <!-- Cancellation Policy -->
+  <section class="section section--warm">
+    <div class="container content-section" style="max-width: 800px;">
+      <h2>Cancellation Policy</h2>
+      <hr class="divider" />
+      <p>I understand that things come up. However, I do ask for at least <strong>24 hours' notice</strong> if you need to cancel or reschedule your appointment.</p>
+      <p>Cancellations made with less than 24 hours' notice, or missed appointments without notice, may incur the full session fee. This is because the reserved time cannot be offered to another client at short notice.</p>
+      <p class="text-muted" style="font-size: 0.875rem;">Exceptions may be made for emergencies — please get in touch and we can discuss.</p>
+    </div>
+  </section>
+
+  <FooterCta title="Ready to Book?" body="Get in touch to schedule your first session." />
+
+</BaseLayout>
