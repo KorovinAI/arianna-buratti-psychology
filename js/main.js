@@ -31,10 +31,12 @@
       var link = item.querySelector('.nav__link');
       if (link) {
         link.addEventListener('click', function (e) {
-          if (window.innerWidth <= 768) {
+          // Mobile: first tap expands the submenu; second tap on the same link navigates.
+          if (window.innerWidth <= 768 && !item.classList.contains('active')) {
             e.preventDefault();
-            item.classList.toggle('active');
+            item.classList.add('active');
           }
+          // If already active (second tap), let the link navigate normally.
         });
       }
     });
