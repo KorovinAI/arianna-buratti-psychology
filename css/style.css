@@ -629,6 +629,7 @@ p:last-child { margin-bottom: 0; }
 .footer__brand img {
   height: 44px;
   margin-bottom: 1rem;
+  filter: brightness(0) invert(1);
 }
 .footer__brand p {
   font-size: 0.875rem;
