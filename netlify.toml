@@ -4,3 +4,10 @@
 
 [build.environment]
   NODE_VERSION = "20"
+
+# Canonicalise www → apex (301)
+[[redirects]]
+  from = "https://www.ab-psych.com.au/*"
+  to = "https://ab-psych.com.au/:splat"
+  status = 301
+  force = true
