@@ -1,13 +1,18 @@
 ---
+export const prerender = true;
+import { getEntry } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/Hero.astro';
 import FooterCta from '../components/FooterCta.astro';
-export const prerender = true;
+
+// CMS-driven fees — Arianna edits in Sveltia, this re-renders on next build.
+const site = await getEntry('site', 'general');
+const fees = site!.data.fees;
 ---
 
 <BaseLayout
   title="Fees & Rebates — Arianna Buratti, Psychologist"
-  description="Session fees, Medicare rebates, and referral information for Arianna Buratti, psychologist in Carlton. $220 per session with $98.97 Medicare rebate available."
+  description={`Session fees, Medicare rebates, and referral information for Arianna Buratti, psychologist in Carlton. ${fees.session_fee} per session with ${fees.medicare_rebate} Medicare rebate available.`}
   activeNav="fees"
 >
 
@@ -35,9 +40,9 @@ export const prerender = true;
           <tbody>
             <tr>
               <td>Individual Session (50 min)</td>
-              <td class="fee-amount">$220</td>
-              <td class="fee-highlight">$98.97</td>
-              <td class="fee-amount">$121.03</td>
+              <td class="fee-amount">{fees.session_fee}</td>
+              <td class="fee-highlight">{fees.medicare_rebate}</td>
+              <td class="fee-amount">{fees.out_of_pocket}</td>
             </tr>
           </tbody>
         </table>

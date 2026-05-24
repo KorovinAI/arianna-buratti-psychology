@@ -1,17 +1,18 @@
 ---
+export const prerender = true;
+import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/Hero.astro';
 import IssuesList from '../components/IssuesList.astro';
 import FooterCta from '../components/FooterCta.astro';
 
-const issues = [
-  'ADHD', 'Anger Management', 'Anxiety', 'Behaviour Problems', 'Bipolar Disorder',
-  'Conduct Disorders', 'Depression', 'Eating Disorders', 'Grief &amp; Loss',
-  'Health Anxiety', 'OCD', 'Panic Attacks', 'Personality Disorders',
-  'Relationship Difficulties', 'Self-Esteem', 'Sleep Disorders',
-  'Stress &amp; Burnout', 'Trauma &amp; PTSD', 'Workplace Stress'
-];
-export const prerender = true;
+// CMS-driven: editor adds/removes issues via Sveltia /admin/.
+// Sorted by `order` ascending (tie-broken alphabetically by name).
+const issuesEntries = await getCollection('issues');
+const issues = issuesEntries
+  .map((e) => e.data)
+  .sort((a, b) => a.order - b.order || a.name.localeCompare(b.name))
+  .map((i) => i.name);
 ---
 
 <BaseLayout

@@ -1,0 +1,13 @@
+site_name: "Arianna Buratti — Psychologist"
+phone_display: "0490 786 047"
+phone_tel: "0490786047"
+email: "info@ab-psych.com.au"
+address_line_1: "165–167 Drummond Street"
+address_line_2: "Carlton VIC 3053"
+hours: "Monday – Saturday, 9:00am – 8:00pm"
+linkedin_url: "https://www.linkedin.com/in/ariannaburatti/"
+credentials: "AHPRA Registered • MAPS"
+fees:
+  session_fee: "$220"
+  medicare_rebate: "$98.97"
+  out_of_pocket: "$121.03"

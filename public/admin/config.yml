@@ -1,0 +1,58 @@
+# Sveltia CMS schema for Arianna Buratti Psychology
+# Editor URL: https://ab-psych.com.au/admin/
+# Edits commit Markdown/YAML to the GitHub repo, which triggers a Netlify rebuild.
+
+backend:
+  name: github
+  repo: KorovinAI/arianna-buratti-psychology
+  branch: main
+  base_url: https://ab-psych.com.au
+  auth_endpoint: /api/auth
+
+media_folder: public/images/uploads
+public_folder: /images/uploads
+
+# Singletons + collections
+collections:
+  # ----- Site Settings (singleton) -----
+  - name: site_settings
+    label: Site Settings
+    delete: false
+    editor:
+      preview: false
+    files:
+      - name: general
+        label: Practice details, fees, hours
+        file: src/content/site/general.yml
+        format: yml
+        fields:
+          - { label: "Practice name", name: site_name, widget: string, default: "Arianna Buratti — Psychologist" }
+          - { label: "Phone (display)", name: phone_display, widget: string, default: "0490 786 047", hint: "How the number appears on the site" }
+          - { label: "Phone (tel link)", name: phone_tel, widget: string, default: "0490786047", hint: "No spaces — used in tel: links" }
+          - { label: "Email", name: email, widget: string, default: "info@ab-psych.com.au" }
+          - { label: "Address line 1", name: address_line_1, widget: string, default: "165–167 Drummond Street" }
+          - { label: "Address line 2", name: address_line_2, widget: string, default: "Carlton VIC 3053" }
+          - { label: "Opening hours", name: hours, widget: string, default: "Monday – Saturday, 9:00am – 8:00pm" }
+          - { label: "LinkedIn URL", name: linkedin_url, widget: string, default: "https://www.linkedin.com/in/ariannaburatti/" }
+          - { label: "Credentials line (footer)", name: credentials, widget: string, default: "AHPRA Registered • MAPS" }
+          - label: "Session fees"
+            name: fees
+            widget: object
+            fields:
+              - { label: "Session fee (display)", name: session_fee, widget: string, default: "$220", hint: "e.g. $220" }
+              - { label: "Medicare rebate (display)", name: medicare_rebate, widget: string, default: "$98.97" }
+              - { label: "Out-of-pocket (display)", name: out_of_pocket, widget: string, default: "$121.03", hint: "Fee minus rebate" }
+
+  # ----- Issues I Help With (collection) -----
+  - name: issues
+    label: "Issues I Help With"
+    label_singular: "Issue"
+    folder: src/content/issues
+    format: yml
+    extension: yml
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Issue name", name: name, widget: string, hint: 'e.g. "Anxiety", "ADHD", "Bipolar Disorder"' }
+      - { label: "Sort order", name: order, widget: number, default: 0, value_type: int, min: 0, hint: "Lower numbers appear first. Tie-breaker is alphabetical." }
