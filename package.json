@@ -2,7 +2,7 @@
   "name": "arianna-buratti-psychology",
   "type": "module",
   "version": "2.0.0",
-  "description": "Arianna Buratti Psychology — Astro + Keystatic",
+  "description": "Arianna Buratti Psychology — Astro static site",
   "private": true,
   "scripts": {
     "dev": "astro dev",
@@ -12,15 +12,7 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/netlify": "^6.6.5",
-    "@astrojs/react": "^5.0.5",
     "@astrojs/sitemap": "^3.2.0",
-    "@keystatic/astro": "^5.0.6",
-    "@keystatic/core": "^0.5.50",
-    "@types/react": "^19.2.15",
-    "@types/react-dom": "^19.2.3",
-    "astro": "^5.0.0",
-    "react": "^19.2.6",
-    "react-dom": "^19.2.6"
+    "astro": "^5.0.0"
   }
 }

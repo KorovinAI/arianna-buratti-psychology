@@ -1,13 +1,12 @@
 ---
-export const prerender = true;
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/Hero.astro';
 import IssuesList from '../components/IssuesList.astro';
 import FooterCta from '../components/FooterCta.astro';
 
-// CMS-driven: editor adds/removes issues via Sveltia /admin/.
-// Sorted by `order` ascending (tie-broken alphabetically by name).
+// Issues come from src/content/issues/*.yml — add/remove .yml files there to change the list.
+// Sorted by `order` field ascending; alphabetical tie-break by name.
 const issuesEntries = await getCollection('issues');
 const issues = issuesEntries
   .map((e) => e.data)

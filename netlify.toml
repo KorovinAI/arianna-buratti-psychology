@@ -5,12 +5,6 @@
 [build.environment]
   NODE_VERSION = "20"
 
-# Standalone Netlify Functions (no Astro adapter — avoids the Astro 5 prerender bug).
-# Function at netlify/functions/auth.js handles /api/auth/* via its own config.path export.
-[functions]
-  directory = "netlify/functions"
-  node_bundler = "esbuild"
-
 # Canonicalise www → apex (301)
 [[redirects]]
   from = "https://www.ab-psych.com.au/*"

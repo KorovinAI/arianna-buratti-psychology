@@ -1,11 +1,11 @@
 ---
-export const prerender = true;
 import { getEntry } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/Hero.astro';
 import FooterCta from '../components/FooterCta.astro';
 
-// CMS-driven fees — Arianna edits in Sveltia, this re-renders on next build.
+// Fees come from src/content/site/general.yml — single source of truth.
+// Edit that file via GitHub web UI (or local git) to change fees; Netlify rebuilds on push.
 const site = await getEntry('site', 'general');
 const fees = site!.data.fees;
 ---
