@@ -23,10 +23,9 @@ import Hero from '../components/Hero.astro';
         <h2>Send a Message</h2>
         <hr class="divider" />
         <p class="text-muted" style="margin-bottom: 1.5rem;">Fill out the form below and I'll get back to you within one business day.</p>
-        <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" id="contactForm">
-          <input type="hidden" name="form-name" value="contact" />
-          <p style="display: none;">
-            <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+        <form id="contactForm" novalidate>
+          <p style="position: absolute; left: -9999px;" aria-hidden="true">
+            <label>Leave this empty: <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
           </p>
           <div class="form-group">
             <label for="name">Full Name *</label>
@@ -48,25 +47,69 @@ import Hero from '../components/Hero.astro';
             <label for="message">Message *</label>
             <textarea id="message" name="message" class="form-textarea" required placeholder="Tell me a little about what you're looking for help with..."></textarea>
           </div>
-          <button type="submit" class="btn btn--primary">Send Message</button>
+          <button type="submit" class="btn btn--primary" id="contactSubmit">Send Message</button>
         </form>
         <div id="formSuccess" style="display: none; padding: 24px; background: var(--warm-white); border-radius: 4px; margin-top: 16px;">
           <h3 style="color: var(--gold);">Message Sent</h3>
           <p>Thank you for reaching out. I'll be in touch within one business day.</p>
         </div>
+        <div id="formError" style="display: none; padding: 16px; background: #fdf2f2; border-left: 3px solid #c53030; border-radius: 4px; margin-top: 16px; color: #742a2a;">
+          <strong>Couldn't send your message.</strong> Please email <a href="mailto:abpsychology4@gmail.com">abpsychology4@gmail.com</a> directly. <span id="formErrorDetail"></span>
+        </div>
       </div>
+
+      <script is:inline>
+        (function () {
+          const form = document.getElementById('contactForm');
+          const submitBtn = document.getElementById('contactSubmit');
+          const success = document.getElementById('formSuccess');
+          const errorBox = document.getElementById('formError');
+          const errorDetail = document.getElementById('formErrorDetail');
+          if (!form) return;
+
+          form.addEventListener('submit', async function (e) {
+            e.preventDefault();
+            errorBox.style.display = 'none';
+            submitBtn.disabled = true;
+            const originalLabel = submitBtn.textContent;
+            submitBtn.textContent = 'Sending…';
+
+            const data = Object.fromEntries(new FormData(form).entries());
+
+            try {
+              const res = await fetch('/api/contact', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data),
+              });
+              const body = await res.json().catch(function () { return {}; });
+
+              if (res.ok && body.ok) {
+                form.style.display = 'none';
+                success.style.display = 'block';
+              } else {
+                errorDetail.textContent = body.error ? `(${body.error})` : '';
+                errorBox.style.display = 'block';
+                submitBtn.disabled = false;
+                submitBtn.textContent = originalLabel;
+              }
+            } catch (err) {
+              errorDetail.textContent = '(network error)';
+              errorBox.style.display = 'block';
+              submitBtn.disabled = false;
+              submitBtn.textContent = originalLabel;
+            }
+          });
+        })();
+      </script>
 
       <!-- Contact Details -->
       <div>
         <h2>Contact Details</h2>
         <hr class="divider" />
         <div style="margin-bottom: 2rem;">
-          <h3 style="font-size: 1.125rem;">Phone</h3>
-          <p><a href="tel:0490786047" style="font-size: 1.25rem; font-weight: 600;">0490 786 047</a></p>
-        </div>
-        <div style="margin-bottom: 2rem;">
           <h3 style="font-size: 1.125rem;">Email</h3>
-          <p><a href="mailto:info@ab-psych.com.au">info@ab-psych.com.au</a></p>
+          <p><a href="mailto:abpsychology4@gmail.com" style="font-size: 1.125rem; font-weight: 600;">abpsychology4@gmail.com</a></p>
         </div>
         <div style="margin-bottom: 2rem;">
           <h3 style="font-size: 1.125rem;">Location</h3>

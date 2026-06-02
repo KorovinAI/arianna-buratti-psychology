@@ -1,15 +1,12 @@
 import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
 
-// Site settings — Sveltia CMS writes one YAML file per "singleton" to src/content/site/.
-// Using glob(): each file in src/content/site/ becomes one entry, keyed by filename.
-// e.g. general.yml → id "general", accessed via getEntry('site', 'general').
+// Site settings — singleton YAML files at src/content/site/.
+// general.yml → id "general", accessed via getEntry('site', 'general').
 const site = defineCollection({
   loader: glob({ pattern: '*.yml', base: 'src/content/site' }),
   schema: z.object({
     site_name: z.string(),
-    phone_display: z.string(),
-    phone_tel: z.string(),
     email: z.string(),
     address_line_1: z.string(),
     address_line_2: z.string(),

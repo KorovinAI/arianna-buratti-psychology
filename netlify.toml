@@ -5,6 +5,13 @@
 [build.environment]
   NODE_VERSION = "20"
 
+# Standalone Netlify Function for the contact form (no Astro adapter — keeps
+# the site pure-static). Function at netlify/functions/contact.js handles
+# POST /api/contact and sends an email via Resend.
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
 # Canonicalise www → apex (301)
 [[redirects]]
   from = "https://www.ab-psych.com.au/*"
