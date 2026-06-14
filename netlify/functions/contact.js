@@ -132,7 +132,7 @@ export default async (req) => {
     const ackText = [
       `Hi ${name},`,
       ``,
-      `Thanks for getting in touch. I've received your message and will respond within one business day (Monday to Saturday). I look forward to connecting with you soon.`,
+      `Thanks for getting in touch. I've received your message and will get back to you soon. I look forward to connecting with you.`,
       ``,
       `If you're in distress or need immediate support, please contact one of these services straight away:`,
       ``,
@@ -151,7 +151,7 @@ export default async (req) => {
     const ackHtml = `
       <div style="font-family: -apple-system, BlinkMacSystemFont, sans-serif; max-width: 600px; color: #1a1a1a; line-height: 1.6;">
         <p>Hi ${escapeHtml(name)},</p>
-        <p>Thanks for getting in touch. I've received your message and will respond within one business day (Monday to Saturday). I look forward to connecting with you soon.</p>
+        <p>Thanks for getting in touch. I've received your message and will get back to you soon. I look forward to connecting with you.</p>
         <div style="margin: 24px 0; padding: 16px 20px; background: #fdf6ee; border-left: 3px solid #AB8133; border-radius: 4px;">
           <p style="margin: 0 0 12px; font-weight: 600;">If you're in distress or need immediate support, please contact one of these services straight away:</p>
           <ul style="margin: 0; padding-left: 20px;">
