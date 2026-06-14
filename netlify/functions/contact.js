@@ -110,6 +110,7 @@ export default async (req) => {
     </div>
   `;
 
+  // --- 1. Notification email to Arianna ---
   try {
     const { data, error } = await resend.emails.send({
       from: `Arianna Buratti Website <${FROM_EMAIL}>`,
@@ -121,8 +122,64 @@ export default async (req) => {
     });
 
     if (error) {
-      console.error('Resend error:', error);
+      console.error('Resend error (notification):', error);
       return jsonResponse(502, { error: 'Failed to send. Please email directly.' });
+    }
+
+    // --- 2. Auto-reply confirmation to the visitor ---
+    // This is "nice to have" — if it fails, we still treat the submission as
+    // successful (the important email went to Arianna).
+    const ackText = [
+      `Hi ${name},`,
+      ``,
+      `Thanks for getting in touch. I've received your message and will respond within one business day (Monday to Saturday). I look forward to connecting with you soon.`,
+      ``,
+      `If you're in distress or need immediate support, please contact one of these services straight away:`,
+      ``,
+      `  Lifeline — 13 11 14 (24/7 crisis support)`,
+      `  Beyond Blue — 1300 22 4636 (24/7 mental health support)`,
+      `  Emergency services — 000 (if you're in immediate danger)`,
+      ``,
+      `Warmly,`,
+      `Arianna Buratti`,
+      `Registered Psychologist • MAPS • AHPRA`,
+      ``,
+      `---`,
+      `Reply to this email to reach Arianna directly. This is an automated confirmation; please don't reply if no further action is needed.`,
+    ].join('\n');
+
+    const ackHtml = `
+      <div style="font-family: -apple-system, BlinkMacSystemFont, sans-serif; max-width: 600px; color: #1a1a1a; line-height: 1.6;">
+        <p>Hi ${escapeHtml(name)},</p>
+        <p>Thanks for getting in touch. I've received your message and will respond within one business day (Monday to Saturday). I look forward to connecting with you soon.</p>
+        <div style="margin: 24px 0; padding: 16px 20px; background: #fdf6ee; border-left: 3px solid #AB8133; border-radius: 4px;">
+          <p style="margin: 0 0 12px; font-weight: 600;">If you're in distress or need immediate support, please contact one of these services straight away:</p>
+          <ul style="margin: 0; padding-left: 20px;">
+            <li><strong>Lifeline</strong> — <a href="tel:131114" style="color: #AB8133;">13 11 14</a> (24/7 crisis support)</li>
+            <li><strong>Beyond Blue</strong> — <a href="tel:1300224636" style="color: #AB8133;">1300 22 4636</a> (24/7 mental health support)</li>
+            <li><strong>Emergency services</strong> — <a href="tel:000" style="color: #AB8133;">000</a> (if you're in immediate danger)</li>
+          </ul>
+        </div>
+        <p style="margin-top: 24px;">Warmly,<br /><strong>Arianna Buratti</strong><br /><span style="color: #666;">Registered Psychologist &bull; MAPS &bull; AHPRA</span></p>
+        <hr style="border: none; border-top: 1px solid #e5e5e5; margin: 32px 0 16px;" />
+        <p style="font-size: 12px; color: #888;">Reply to this email to reach Arianna directly. This is an automated confirmation; please don't reply if no further action is needed.</p>
+      </div>
+    `;
+
+    try {
+      const { error: ackError } = await resend.emails.send({
+        from: `Arianna Buratti <${FROM_EMAIL}>`,
+        to: [email],
+        replyTo: TO_EMAIL,
+        subject: 'Thanks for reaching out — Arianna Buratti Psychology',
+        text: ackText,
+        html: ackHtml,
+      });
+      if (ackError) {
+        console.error('Resend error (auto-reply, non-fatal):', ackError);
+      }
+    } catch (ackErr) {
+      console.error('Exception sending auto-reply (non-fatal):', ackErr);
     }
 
     return jsonResponse(200, { ok: true, id: data?.id });
